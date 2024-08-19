@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 
 image_path = "images/profile_pic.png"
+resume_path = "files/Soojal_kumar_Resume.pdf"
 # Function to inject custom CSS
 def inject_css():
     st.markdown("""
