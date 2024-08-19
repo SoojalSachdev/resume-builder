@@ -1,0 +1,67 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #fff;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 40px; /* Increased gap between columns */
+}
+
+.text-container {
+    text-align: left;
+    color: #333;
+}
+
+h1, h3 {
+    margin: 5px 0;
+}
+
+.profile-container img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjusted gap between links */
+    margin-top: 20px;
+    color: white;
+}
+
+.links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 33%;
+}
+
+.links a:hover {
+    color: #bbbbbb;
+}
+
+.download-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.download-button:hover {
+    background-color: #218838;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
