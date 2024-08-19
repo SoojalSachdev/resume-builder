@@ -101,8 +101,9 @@ def add_line_break():
 
 
 # Function to display the download button
+
 def display_download_button():
-    with open(r"C:\Python\YoungDevInterns_Python_Tasks\Soojal_kumar_Resume.pdf", "rb") as file:
+    with open(resume_path, "rb") as file:
         btn = st.download_button(
             label="Download Resume",
             data=file,
@@ -110,7 +111,6 @@ def display_download_button():
             mime="application/octet-stream",
             key="download_button"
         )
-
 
 # Function to display profile image and contact information
 def display_profile_and_contact():
