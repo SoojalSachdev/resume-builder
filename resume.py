@@ -76,9 +76,7 @@ def inject_css():
         visibility: hidden;
     }
 
-    header {
-        visibility: hidden;
-    }
+   
 
     /* Responsive Design */
     @media (max-width: 768px) {
