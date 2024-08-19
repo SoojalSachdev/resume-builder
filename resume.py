@@ -3,15 +3,25 @@ from PIL import Image
 
 image_path = "images/profile_pic.png"
 resume_path = "files/Soojal_kumar_Resume.pdf"
+
+st.set_page_config(
+    page_title="Soojal Kumar | Resume",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+    theme={
+        "primaryColor": "#d33682",
+        "backgroundColor": "#002b36",
+        "secondaryBackgroundColor": "#586e75",
+        "textColor": "#fff"
+    }
+)
+
 # Function to inject custom CSS
 def inject_css():
     st.markdown("""
     <style>
     body {
-        font-family: 'Arial', sans-serif;
-        background-color: #000;
-        color: #fff;
-        text-decoration: none;
+        font-family: serif;
     }
 
     .profile-container {
@@ -19,15 +29,14 @@ def inject_css():
         align-items: center;
         justify-content: center;
         margin-bottom: 20px;
-        gap: 40px; /* Increased gap between columns */
+        gap: 40px;
         text-align: center;
         max-width: 900px;
-        margin: 0 auto; /* Center the container */
+        margin: 0 auto;
     }
 
     .text-container {
         text-align: left;
-        color: #fff;
     }
 
     h1, h3 {
@@ -42,43 +51,37 @@ def inject_css():
     .links {
         display: flex;
         justify-content: center;
-        gap: 20px; /* Adjusted gap between links */
+        gap: 20px;
         margin-top: 20px;
-        color: white;
     }
 
     .links a {
         text-decoration: none;
-        color: #ffffff;
         font-weight: bold;
         padding-right: 200px;
     }
 
     .links a:hover {
-        color: #d33682
+        color: var(--primary-color);
     }
 
-     .stDownloadButton button {
-        color: white;
+    .stDownloadButton button {
         background-color: transparent;
-        border: 2px solid white;
+        border: 2px solid var(--text-color);
         padding: 10px 20px;
         border-radius: 20px;
         cursor: pointer;
     }
 
-    .stDownloadButton button:hover{
-       color: #d33682;
-       border: 2px solid #d33682;
+    .stDownloadButton button:hover {
+        color: var(--primary-color);
+        border-color: var(--primary-color);
     }
 
     footer {
         visibility: hidden;
     }
 
-   
-
-    /* Responsive Design */
     @media (max-width: 768px) {
         .profile-container {
             flex-direction: column;
@@ -91,6 +94,7 @@ def inject_css():
     }
     </style>
     """, unsafe_allow_html=True)
+
 
 
 # Function to add a horizontal line
